@@ -1,14 +1,14 @@
 var React = require('react');
 var ConfirmBattle = require('../components/ConfirmBattle');
+var githubHelpers = require('../utils/githubHelpers');
 
 var ConfirmBattleContainer = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired
   },
   componentDidMount: function() {
-    //console.log(this.props.location.query);
-    console.log('did mount');
-    // fetch info from github then update state
+    var query = this.props.location.query;
+    githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo]);
   },
   getInitialState: function() {
     console.log('get initial state');
