@@ -5,10 +5,6 @@ var Link = ReactRouter.Link;
 var UserDetail = require('./UserDetail');
 var UserDetailsWrapper = require('./UserDetailsWrapper');
 
-function puke(object) {
-  return <pre>{JSON.stringify(object, null, ' ')}</pre>
-}
-
 function ConfirmBattle(props) {
   return props.isLoading === true
    ? <p>Loading!</p>

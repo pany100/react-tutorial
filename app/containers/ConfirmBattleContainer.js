@@ -27,7 +27,7 @@ var ConfirmBattleContainer = React.createClass({
     this.context.router.push({
       pathname: '/results',
       state: {
-        playerInfo: this.state.playerInfo
+        playerInfo: this.state.playerInfo //Le estoy pasando un estado a la ruta results
       }
     })
   },
